@@ -31,7 +31,8 @@ NSArray* findInterface (NSString* text)
 {
     @autoreleasepool {
         //复制代码
-        NSString *regex = @"-\\s?\\(.*?\\).*?(?=\\n|$|\\{)";
+//        NSString *regex = @"-\\s?\\(.*?\\).*?(?=\\n|$|\\{)";
+        NSString *regex = @"(-|\\+)\\s?\\(.*?\\).*?(?=\\{)";
         NSString *str = text;
         NSError *error;
         NSRegularExpression *regular = [NSRegularExpression regularExpressionWithPattern:regex
